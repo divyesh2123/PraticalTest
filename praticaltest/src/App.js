@@ -4,7 +4,7 @@ import React, { useEffect } from 'react'
 import Header from './Header'
 // import Login from './Login'
 import { ReactDOM } from 'react';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 import Layout from "./Pages/Layout";
 import Home from "./Pages/Home";
 import Blogs from "./Pages/Blogs";
@@ -26,6 +26,16 @@ import VideoPlayer from './VideoPlayer';
 import MyData from './MyData';
 import DynamicForm from './DynamicForm';
 import MyUnControllForm from './MyUnControllForm';
+import GridExample from './MyDataDisplay';
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  Link
+} from "react-router-dom";
+import ContactData from './ContactData';
+import HeaderData from './HeaderData';
+import FooterData from './FooterData';
 
 function App() {
 
@@ -40,6 +50,37 @@ function App() {
 
   return (
    <>
+
+<BrowserRouter>
+
+    <HeaderData></HeaderData>
+
+    
+    <ul>
+       
+          <li>
+            <Link to='/'>Home</Link>
+          </li>
+          <li>
+            <Link to='/contact'>Contact</Link>
+          </li>
+       
+      </ul>
+
+    
+
+
+    <Routes>
+      <Route path="/" element={<Home />}/>
+      <Route  path='/contact'  element={<ContactData />} />
+       
+     
+    </Routes>
+
+
+    <FooterData></FooterData>
+
+  </BrowserRouter>
      {/* <Registration></Registration> */}
      {/* <Admin></Admin> */}
      {/* <Login></Login> */}
@@ -71,8 +112,8 @@ function App() {
        {/* <MyData></MyData> 
 
        <MyUnControllForm></MyUnControllForm> */}
-
-        <DynamicForm></DynamicForm> 
+ 
+         <GridExample></GridExample> 
    
    </>
   )
