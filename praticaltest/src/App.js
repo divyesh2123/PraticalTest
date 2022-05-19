@@ -36,6 +36,9 @@ import {
 import ContactData from './ContactData';
 import HeaderData from './HeaderData';
 import FooterData from './FooterData';
+import Navigration from './Navigration';
+import Invoice from './Invoice';
+import SentInvoices from './SentInvoices';
 
 function App() {
 
@@ -64,6 +67,10 @@ function App() {
           <li>
             <Link to='/contact'>Contact</Link>
           </li>
+
+          <li>
+            <Link to='/invoices'>Invoices</Link>
+          </li>
        
       </ul>
 
@@ -73,7 +80,10 @@ function App() {
     <Routes>
       <Route path="/" element={<Home />}/>
       <Route  path='/contact'  element={<ContactData />} />
-       
+      <Route path="invoices" element={<Navigration />}>
+        <Route index  element={<Invoice />} />
+        <Route path="sent" element={<SentInvoices />} />
+      </Route>
      
     </Routes>
 
