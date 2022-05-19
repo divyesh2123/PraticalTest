@@ -31,18 +31,28 @@ const monthToComparableNumber = (date) => {
 };
 
   const GridExample = () => {
-    const [rowData] = useState([
+    const [rowData,setRowData] = useState([
       { make: 'Toyota', model: 'Celica', price: 35000,name:"divyesh" },
       { make: 'Ford', model: 'Mondeo', price: 32000,name:"rach" },
       { make: 'Porsche', model: 'Boxter', price: 72000, name : "dh" },
     ]);
   
     const [columnDefs] = useState([
-      { field: 'make' },
-      { field: 'model' },
-      { field: 'price' },
-      { field: 'name' },
+      { field: 'userId' },
+      { field: 'id' },
+      { field: 'title' },
+      { field: 'completed' },
     ]);
+
+    useEffect(()=> {
+
+      fetch("https://jsonplaceholder.typicode.com/todos")
+      .then(y=>y.json())
+      .then(y=> {
+
+        setRowData(y);
+      })
+    },[])
   
     return (
       <div className="ag-theme-alpine" style={{ height: 400, width: 600 }}>
