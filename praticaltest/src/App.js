@@ -28,10 +28,12 @@ import DynamicForm from './DynamicForm';
 import MyUnControllForm from './MyUnControllForm';
 import GridExample from './MyDataDisplay';
 import {
-  BrowserRouter,
+  BrowserRouter as Router,
   Routes,
   Route,
-  Link
+  Link,
+  useRoutes,
+  NavLink
 } from "react-router-dom";
 import ContactData from './ContactData';
 import HeaderData from './HeaderData';
@@ -39,6 +41,9 @@ import FooterData from './FooterData';
 import Navigration from './Navigration';
 import Invoice from './Invoice';
 import SentInvoices from './SentInvoices';
+import MyEData from './MyEData';
+import CustComLink from './CustComLink';
+import {AllPages}  from './MyRouteData';
 
 function App() {
 
@@ -50,47 +55,75 @@ function App() {
     })
   },[])
 
+ 
+  const myroutes = useRoutes(AllPages());
+
 
   return (
    <>
 
-<BrowserRouter>
+
+
 
     <HeaderData></HeaderData>
 
     
     <ul>
        
-          <li>
+          <li>ngg
             <Link to='/'>Home</Link>
           </li>
           <li>
-            <Link to='/contact'>Contact</Link>
+            
+
+            <CustComLink to='/contact'>Contact</CustComLink>
           </li>
 
           <li>
             <Link to='/invoices'>Invoices</Link>
+          </li>
+
+          <li>
+          <NavLink
+            to="/myPage/1"
+            style={({ isActive }) =>
+              isActive
+                ? {
+                    color: '#fff',
+                    background: '#7600dc',
+                  }
+                : { color: '#545e6f', background: 'red' }
+            }
+          >MyPage
+            </NavLink>
           </li>
        
       </ul>
 
     
 
-
+      {myroutes}
+{/* 
     <Routes>
       <Route path="/" element={<Home />}/>
+      <Route path='/myPage/:datat'  element={<MyEData/>}/>
       <Route  path='/contact'  element={<ContactData />} />
       <Route path="invoices" element={<Navigration />}>
         <Route index  element={<Invoice />} />
         <Route path="sent" element={<SentInvoices />} />
       </Route>
      
-    </Routes>
+    </Routes> */}
+
+    
+
+    
+    
 
 
     <FooterData></FooterData>
 
-  </BrowserRouter>
+  
      {/* <Registration></Registration> */}
      {/* <Admin></Admin> */}
      {/* <Login></Login> */}
@@ -123,7 +156,7 @@ function App() {
 
        <MyUnControllForm></MyUnControllForm> */}
  
-         <GridExample></GridExample> 
+        
    
    </>
   )
