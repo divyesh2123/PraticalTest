@@ -45,6 +45,9 @@ import MyEData from './MyEData';
 import CustComLink from './CustComLink';
 import {AllPages}  from './MyRouteData';
 
+import ShowMoreTextToggle from './ShowMoreTextToggle';
+import MyMemoData from './MyMemoData';
+
 function App() {
 
   useEffect(()=> {
@@ -156,8 +159,18 @@ function App() {
 
        <MyUnControllForm></MyUnControllForm> */}
  
-        
+        {/* <ShowMoreTextToggle text="This is the data This is more data This is more Data This is more data"></ShowMoreTextToggle>
    
+        <ShowMoreTextToggle text="This is the data This is more data This is more Data This is more data"></ShowMoreTextToggle>
+        <ShowMoreTextToggle text="This is the data This is more data This is more Data This is more data"></ShowMoreTextToggle>
+        <ShowMoreTextToggle text="This is the data This is more data This is more Data This is more data"></ShowMoreTextToggle>
+        <ShowMoreTextToggle text="This is the data This is more data This is more Data This is more data"></ShowMoreTextToggle>
+        <ShowMoreTextToggle text="This is the data This is more data This is more Data This is more data"></ShowMoreTextToggle>
+        <ShowMoreTextToggle text="This is the data This is more data This is more Data This is more data"></ShowMoreTextToggle> */}
+
+
+        <MyMemoData></MyMemoData>
+
    </>
   )
 }
