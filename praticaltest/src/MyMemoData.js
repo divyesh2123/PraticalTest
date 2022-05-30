@@ -19,14 +19,42 @@ export default function MyMemoData() {
 
  }
 
+ const deleMyData= (myindex) => {
+
+   var myData = array.filter((value,index) => {
+      if(myindex != index)
+      {
+         return value
+      }
+   })
+
+ }
+
+ const handleRemove = React.useCallback(
+   (id) => { 
+
+      var myData = array.filter((value,index) => {
+         if(index != id)
+         {
+            return value
+         }
+      });
+
+      setArray(myData)
+
+
+    },
+   [array]
+ );
+
   return (
     <div>
 
             <input type="text" value={data}  onChange={setmyData}/>
-            <button type="button" onClick={saveMyData}>Save</button>
+            <button type="button" onClick={handleRemove}>Save</button>
 
 
-            <MyDisplayItem data={{array}} />
+            <MyDisplayItem data={array}  />
 
     </div>
   )

@@ -5,7 +5,7 @@ import React from 'react'
   console.log("This has been changes")
   return (
     <div>{
-        data.array.map((element)=> {
+        data.map((element)=> {
 
             return (<div>{element}</div>)
         })
@@ -14,7 +14,4 @@ import React from 'react'
   )
 }
 
-export default React.memo(MyDisplayItem,(pr, cu)=> {
-  if(pr.array)
-  return true;
-}  )
+export default React.memo(MyDisplayItem)

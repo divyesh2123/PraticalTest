@@ -27,6 +27,8 @@ import MyData from './MyData';
 import DynamicForm from './DynamicForm';
 import MyUnControllForm from './MyUnControllForm';
 import GridExample from './MyDataDisplay';
+import SearchTodos from './TodoList';
+import SearchUsers from './UsersList';
 import {
   BrowserRouter as Router,
   Routes,
@@ -47,6 +49,8 @@ import {AllPages}  from './MyRouteData';
 
 import ShowMoreTextToggle from './ShowMoreTextToggle';
 import MyMemoData from './MyMemoData';
+import MyHoc from './MyHoc';
+import MyLogin from './MyLogin';
 
 function App() {
 
@@ -58,6 +62,11 @@ function App() {
     })
   },[])
 
+
+  var MyHome = MyHoc(Home);
+
+  var MyContact = MyHoc(ContactData); 
+
  
   const myroutes = useRoutes(AllPages());
 
@@ -66,12 +75,12 @@ function App() {
    <>
 
 
-
-
-    <HeaderData></HeaderData>
+      <SearchTodos></SearchTodos>
+      <SearchUsers></SearchUsers>
+  
 
     
-    <ul>
+    {/* <ul>
        
           <li>ngg
             <Link to='/'>Home</Link>
@@ -85,6 +94,10 @@ function App() {
           <li>
             <Link to='/invoices'>Invoices</Link>
           </li>
+          <li>
+            <Link to='/login'>Login</Link>
+          </li>
+
 
           <li>
           <NavLink
@@ -101,22 +114,23 @@ function App() {
             </NavLink>
           </li>
        
-      </ul>
+      </ul> */}
 
     
 
-      {myroutes}
-{/* 
-    <Routes>
-      <Route path="/" element={<Home />}/>
+      {/* {myroutes} */}
+
+    {/* <Routes>
+      <Route path="/" element={<MyHome />}/>
+      <Route path='/login' element={<MyLogin/>} />
       <Route path='/myPage/:datat'  element={<MyEData/>}/>
-      <Route  path='/contact'  element={<ContactData />} />
+      <Route  path='/contact'  element={<MyContact />} />
       <Route path="invoices" element={<Navigration />}>
         <Route index  element={<Invoice />} />
         <Route path="sent" element={<SentInvoices />} />
       </Route>
      
-    </Routes> */}
+    </Routes>  */}
 
     
 
@@ -124,7 +138,7 @@ function App() {
     
 
 
-    <FooterData></FooterData>
+  
 
   
      {/* <Registration></Registration> */}
@@ -169,7 +183,7 @@ function App() {
         <ShowMoreTextToggle text="This is the data This is more data This is more Data This is more data"></ShowMoreTextToggle> */}
 
 
-        <MyMemoData></MyMemoData>
+      
 
    </>
   )
