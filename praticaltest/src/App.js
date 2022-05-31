@@ -51,6 +51,7 @@ import ShowMoreTextToggle from './ShowMoreTextToggle';
 import MyMemoData from './MyMemoData';
 import MyHoc from './MyHoc';
 import MyLogin from './MyLogin';
+import MyCounter from './MyCounter';
 
 function App() {
 
@@ -75,8 +76,7 @@ function App() {
    <>
 
 
-      <SearchTodos></SearchTodos>
-      <SearchUsers></SearchUsers>
+     <MyCounter></MyCounter>
   
 
     
