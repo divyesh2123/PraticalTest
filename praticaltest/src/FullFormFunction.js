@@ -67,7 +67,7 @@ export default function FullFormFunction() {
     
    var   handleChange = e => {
 
-    debugger;
+   
         
         
         const { name, value, checked } = e.target;

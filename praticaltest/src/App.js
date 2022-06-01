@@ -52,6 +52,8 @@ import MyMemoData from './MyMemoData';
 import MyHoc from './MyHoc';
 import MyLogin from './MyLogin';
 import MyCounter from './MyCounter';
+import MyProduct from './MyProduct';
+import MyFunRd1 from './MyFunRd1';
 
 function App() {
 
@@ -76,7 +78,11 @@ function App() {
    <>
 
 
-     <MyCounter></MyCounter>
+      {/* <MyCounter></MyCounter> */}
+      <MyFunRd1></MyFunRd1>
+      <MyProduct></MyProduct>
+
+     {/* <FullFormFunction></FullFormFunction> */}
   
 
     

@@ -1,4 +1,4 @@
-import { INCREMENT,DECREMENT,RESET } from "../constans"
+import { INCREMENT,DECREMENT,RESET, Product } from "../constans"
 
 
 export const Increment = () => ({
@@ -15,5 +15,13 @@ export const Reset = () => ({
   type: RESET,
  
 })
+
+export const GetProduct = (payload) => ({
+  type: Product,
+  payload
+})
+
+
+
 
 

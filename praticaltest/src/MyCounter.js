@@ -4,7 +4,9 @@ import { Decrement, Increment, Reset } from './action';
 
 export default function MyCounter() {
 
-    const myCounter =  useSelector((state) => state);
+    const myCounter =  useSelector((state) => state.conuter);
+
+    console.log(myCounter);
     const myDispatch = useDispatch();
 
 
