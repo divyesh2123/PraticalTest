@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, Suspense } from 'react'
 // import Admin from './Admin'
 // import API from './API'
 import Header from './Header'
@@ -75,18 +75,18 @@ function App() {
 
 
   return (
-   <>
+    <Suspense fallback={<div>Loading...</div>}>
 
 
       {/* <MyCounter></MyCounter> */}
-      <MyFunRd1></MyFunRd1>
-      <MyProduct></MyProduct>
+      {/* <MyFunRd1></MyFunRd1>
+      <MyProduct></MyProduct> */}
 
      {/* <FullFormFunction></FullFormFunction> */}
   
 
     
-    {/* <ul>
+     <ul>
        
           <li>ngg
             <Link to='/'>Home</Link>
@@ -120,11 +120,11 @@ function App() {
             </NavLink>
           </li>
        
-      </ul> */}
+      </ul> 
 
     
 
-      {/* {myroutes} */}
+       {myroutes} 
 
     {/* <Routes>
       <Route path="/" element={<MyHome />}/>
@@ -191,7 +191,7 @@ function App() {
 
       
 
-   </>
+</Suspense>
   )
 }
 
