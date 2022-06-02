@@ -54,6 +54,9 @@ import MyLogin from './MyLogin';
 import MyCounter from './MyCounter';
 import MyProduct from './MyProduct';
 import MyFunRd1 from './MyFunRd1';
+import MyFunRd2 from './MyFunRd2';
+import MyFunRd3 from './MyFunRd3';
+import UserDataList from './UserDataList';
 
 function App() {
 
@@ -75,9 +78,10 @@ function App() {
 
 
   return (
-    <Suspense fallback={<div>Loading...</div>}>
+    <>
 
-
+      <MyFunRd3></MyFunRd3>
+      <UserDataList></UserDataList>
       {/* <MyCounter></MyCounter> */}
       {/* <MyFunRd1></MyFunRd1>
       <MyProduct></MyProduct> */}
@@ -86,7 +90,7 @@ function App() {
   
 
     
-     <ul>
+     {/* <ul>
        
           <li>ngg
             <Link to='/'>Home</Link>
@@ -124,7 +128,7 @@ function App() {
 
     
 
-       {myroutes} 
+       {myroutes}  */}
 
     {/* <Routes>
       <Route path="/" element={<MyHome />}/>
@@ -191,7 +195,7 @@ function App() {
 
       
 
-</Suspense>
+</>
   )
 }
 

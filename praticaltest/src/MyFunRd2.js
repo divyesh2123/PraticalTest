@@ -1,17 +1,18 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux'
 import { useSelector,useDispatch } from 'react-redux';
+import { Decrement, Reset,Increment } from './action';
 
 const mapStateToProps = (state) => {
     return {
-      count: state.count
+      count: state.conuter
     }
   }
 
   function MyFunRd2(data) {
 
    
-    
+     console.log(data);
  
    
 
@@ -28,9 +29,9 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
     return {
       // dispatching plain actions
-      increment: () => dispatch({ type: 'increment' }),
-      decrement: () => dispatch({ type: 'decrement' }),
-      reset: () => dispatch({ type: 'reset' }),
+      increment: () => dispatch(Increment()),
+      decrement: () => dispatch(Decrement()),
+      reset: () => dispatch(Reset()),
     }
   }
 

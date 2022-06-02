@@ -1,16 +1,17 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux'
 import { useSelector,useDispatch } from 'react-redux';
+import { Decrement, Increment, Reset } from './action';
 
 // The action creators
-export const increment = () => ({ type: "increment" });
-export const decrement = () => ({ type: "decrement" });
-export const reset = () => ({ type: "reset" });
+export const increment = () => ( Increment());
+export const decrement = () => (Decrement());
+export const reset = () => (Reset());
 
 
 const mapStateToProps = (state) => {
     return {
-      count: state.count
+      count: state.conuter
     }
   }
 
