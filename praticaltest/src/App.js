@@ -80,8 +80,9 @@ function App() {
   return (
     <>
 
-      <MyFunRd3></MyFunRd3>
-      <UserDataList></UserDataList>
+      {/* <MyFunRd3></MyFunRd3>
+      <UserDataList></UserDataList> */}
+      <MyCounter></MyCounter>
       {/* <MyCounter></MyCounter> */}
       {/* <MyFunRd1></MyFunRd1>
       <MyProduct></MyProduct> */}

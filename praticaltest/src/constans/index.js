@@ -1,6 +1,8 @@
 
 export const  INCREMENT = "INCREMENT";
 
+export const IncrementAsync = "INCREMENT_ASYNC"
+
 export const DECREMENT = "DECREMENT";
 
 export const RESET="RESET";

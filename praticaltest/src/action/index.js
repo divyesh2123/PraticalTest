@@ -1,8 +1,13 @@
-import { INCREMENT,DECREMENT,RESET, Product } from "../constans"
+import { INCREMENT,DECREMENT,RESET, Product,IncrementAsync } from "../constans"
 
 
 export const Increment = () => ({
   type: INCREMENT,
+  
+})
+
+export const IncrementAsyncAction = () => ({
+  type: IncrementAsync,
   
 })
 

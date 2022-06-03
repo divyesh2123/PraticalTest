@@ -1,6 +1,6 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { Decrement, Increment, Reset } from './action';
+import { Decrement, Increment, Reset,IncrementAsyncAction } from './action';
 
 export default function MyCounter() {
 
@@ -13,7 +13,7 @@ export default function MyCounter() {
   return (
     <div>
         {myCounter}
-        <button onClick={()=> {myDispatch(Increment())} }>Increment</button>
+        <button onClick={()=> {myDispatch({type : 'INCREMENT_ASYNC'})} }>Increment</button>
         <button onClick={()=> {myDispatch(Decrement())} }>Decrement</button>
         <button onClick={()=> {myDispatch(Reset())} }>Reset</button>
 
