@@ -57,6 +57,8 @@ import MyFunRd1 from './MyFunRd1';
 import MyFunRd2 from './MyFunRd2';
 import MyFunRd3 from './MyFunRd3';
 import UserDataList from './UserDataList';
+import UsersList from './UsersList';
+import TodoList from './TodoList';
 
 function App() {
 
@@ -80,18 +82,16 @@ function App() {
   return (
     <>
 
-      {/* <MyFunRd3></MyFunRd3>
-      <UserDataList></UserDataList> */}
-      <MyCounter></MyCounter>
-      {/* <MyCounter></MyCounter> */}
-      {/* <MyFunRd1></MyFunRd1>
-      <MyProduct></MyProduct> */}
+    
+
+      <UsersList></UsersList>
+      <TodoList></TodoList>
 
      {/* <FullFormFunction></FullFormFunction> */}
   
 
     
-     {/* <ul>
+      <ul>
        
           <li>ngg
             <Link to='/'>Home</Link>
@@ -129,10 +129,10 @@ function App() {
 
     
 
-       {myroutes}  */}
+       {/* {myroutes}   */}
 
-    {/* <Routes>
-      <Route path="/" element={<MyHome />}/>
+     <Routes>
+      <Route  path="/" element={<MyHome />}/>
       <Route path='/login' element={<MyLogin/>} />
       <Route path='/myPage/:datat'  element={<MyEData/>}/>
       <Route  path='/contact'  element={<MyContact />} />
@@ -141,7 +141,7 @@ function App() {
         <Route path="sent" element={<SentInvoices />} />
       </Route>
      
-    </Routes>  */}
+    </Routes>  
 
     
 
