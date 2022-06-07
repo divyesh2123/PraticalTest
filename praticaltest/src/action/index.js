@@ -26,6 +26,12 @@ export const GetProduct = (payload) => ({
   payload
 })
 
+export const GetUserData = (payload) => ({
+  type: 'GET_USERS_REQUESTED',
+  
+})
+
+
 
 
 

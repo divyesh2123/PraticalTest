@@ -9,13 +9,13 @@ const initialState = {
 export default (state = initialState, { type, payload }) => {
   switch (type) {
 
-  case GET_CURRENT_USER:
+  case "GET_USERS_REQUESTED":
     return { ...state, loading : true }
 
-    case GET_CURRENT_USER_SUCCESS:
+    case "GET_USERS_SUCCESS":
         return { ...state, loading : false, userData : payload }
 
-    case GET_CURRENT_USER_FAILURE:
+    case "GET_USERS_FAILED":
 
         return {...state , loading: false, error : payload}
     

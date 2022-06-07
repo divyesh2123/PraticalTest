@@ -59,6 +59,8 @@ import MyFunRd3 from './MyFunRd3';
 import UserDataList from './UserDataList';
 import UsersList from './UsersList';
 import TodoList from './TodoList';
+import MyUserAPI from './MyUserAPI';
+import CustromRegistration from './CustromRegistration';
 
 function App() {
 
@@ -83,9 +85,15 @@ function App() {
     <>
 
     
-
+      {/* <DynamicForm></DynamicForm>
       <UsersList></UsersList>
-      <TodoList></TodoList>
+      <TodoList></TodoList> */}
+{/* 
+      <MyCounter></MyCounter>
+      <MyUserAPI></MyUserAPI>
+      <MyAccountData></MyAccountData> */}
+
+     
 
      {/* <FullFormFunction></FullFormFunction> */}
   
@@ -104,6 +112,9 @@ function App() {
 
           <li>
             <Link to='/invoices'>Invoices</Link>
+          </li>
+          <li>
+            <Link to='/registration'>Registration</Link>
           </li>
           <li>
             <Link to='/login'>Login</Link>
@@ -136,6 +147,7 @@ function App() {
       <Route path='/login' element={<MyLogin/>} />
       <Route path='/myPage/:datat'  element={<MyEData/>}/>
       <Route  path='/contact'  element={<MyContact />} />
+      <Route  path='/registration'  element={<CustromRegistration />} />
       <Route path="invoices" element={<Navigration />}>
         <Route index  element={<Invoice />} />
         <Route path="sent" element={<SentInvoices />} />
