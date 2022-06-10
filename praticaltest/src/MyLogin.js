@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 import { loginData } from './action/loginAction';
+import { useEffect } from 'react';
 
 export default function MyLogin() {
 
@@ -12,6 +14,8 @@ export default function MyLogin() {
 
   const mydispatch = useDispatch();
 
+  const myNavigate = useNavigate();
+
   const myUser = useSelector((state)=> state.loginData.isLogedId);
 
   console.log(myUser);
@@ -22,8 +26,15 @@ export default function MyLogin() {
 
     setData({...myData,[name]: value})
 
+   
 
   }
+
+  useEffect(() => {
+    if (myUser) {
+      myNavigate("/");
+    }
+  }, [myUser, myNavigate]);
 
   const handleSubmit = (e)=>
   {

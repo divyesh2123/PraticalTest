@@ -24,3 +24,12 @@ export const Login_SUCCESS ="Login_SUCCESS";
 export const Login_Failed = "Login_Failed";
 
 export const Login_Start = "Login_Start";
+
+export const Account_Start = "Account_Start";
+
+export const Account_SUCCESS = "Account_SUCCESS";
+
+export const Account_Failed = "Account_Failed";
+
+
+

@@ -1,4 +1,5 @@
 import { combineReducers } from "redux";
+import accountReducer from "./accountReducer";
 import counterReducer from "./counterReducer";
 import loginReucer from "./loginReucer";
 import productReducer from "./productReducer";
@@ -14,7 +15,8 @@ const rootReducer = combineReducers(
     productsOldModule: products,
     userdata : userReducer,
     registration:registrationReducer,
-    loginData: loginReucer
+    loginData: loginReucer,
+    accountData: accountReducer
     }
 )
 
