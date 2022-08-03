@@ -61,6 +61,11 @@ import UsersList from './UsersList';
 import TodoList from './TodoList';
 import MyUserAPI from './MyUserAPI';
 import CustromRegistration from './CustromRegistration';
+import SimpleReactFileUpload from './axiosbase/SimpleReactFileUpload';
+
+const MyEDataLazy = React.lazy(() => import("./MyEData.js"));
+
+const MyHome = React.lazy(() => import("./Pages/Home"));
 
 function App() {
 
@@ -73,16 +78,13 @@ function App() {
   },[])
 
 
-  var MyHome = MyHoc(Home);
-
-  var MyContact = MyHoc(ContactData); 
 
  
   const myroutes = useRoutes(AllPages());
 
 
   return (
-    <>
+    <Suspense fallback={<div>Loading...</div>}>
 
     
       {/* <DynamicForm></DynamicForm>
@@ -138,6 +140,7 @@ function App() {
        
       </ul> 
 
+<SimpleReactFileUpload></SimpleReactFileUpload>
     
 
        {/* {myroutes}   */}
@@ -145,8 +148,8 @@ function App() {
      <Routes>
       <Route  path="/" element={<MyHome />}/>
       <Route path='/login' element={<MyLogin/>} />
-      <Route path='/myPage/:datat'  element={<MyEData/>}/>
-      <Route  path='/contact'  element={<MyContact />} />
+      <Route path='/myPage/:datat'  element={<MyEDataLazy/>}/>
+      
       <Route  path='/registration'  element={<CustromRegistration />} />
       <Route path="invoices" element={<Navigration />}>
         <Route index  element={<Invoice />} />
@@ -208,7 +211,7 @@ function App() {
 
       
 
-</>
+</Suspense>
   )
 }
 

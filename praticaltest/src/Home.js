@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { accountData } from './action/accountAction';
+import SimpleReactFileUpload from './axiosbase/SimpleReactFileUpload';
 
 export default function Home() {
 
@@ -18,6 +19,9 @@ export default function Home() {
 
 
   return (
-    <div>Home</div>
+    <div>
+
+      <SimpleReactFileUpload></SimpleReactFileUpload>
+    </div>
   )
 }
