@@ -11,15 +11,19 @@ export default function VideoPlayer() {
     if (!myButton.current.classList.contains("slide")) {
      
         myButton.current.classList.add("slide");
-        myVideo.current.pause();
+        //myVideo.current.pause();
       } else {
         myButton.current.classList.remove("slide");
-        myVideo.current.play();
+       // myVideo.current.play();
       }
+
+      myVideo.current.toggle();
   }
   return (
     <header>
-    <video ref={myVideo}  controls muted autoplay loop class="video-container">
+    <video ref={myVideo}  
+    controls muted autoplay 
+    loop class="video-container">
       <source src={Video} type="video/mp4" />
      
     </video>
