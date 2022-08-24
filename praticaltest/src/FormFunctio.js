@@ -60,6 +60,7 @@ export default function FormFunctio() {
                   <input type="text"  
                   {...formik.getFieldProps('firstName')} />
                   {renderErrorMessage('firstName')}
+                  
                 </div>
               </div>
               <div class="form-group">
@@ -117,7 +118,7 @@ export default function FormFunctio() {
             </code>
             <h5>Errors:</h5>
             <code>
-              <pre>{JSON.stringify(formik.errors, null, 2)}</pre>
+              <pre>{JSON.stringify(formik.errors,null,)}</pre>
             </code>
             <h5>Touched:</h5>
             <code>
