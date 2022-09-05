@@ -9,6 +9,8 @@ const mapStateToProps = (state) => {
     }
   }
 
+  
+
 function MyFunRd1({ count, dispatch }) {
  
     const increment = () => {
