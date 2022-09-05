@@ -5,7 +5,7 @@ export default function ShowMoreTextToggle({text}) {
     const truncateText = React.useMemo(() => {
         console.log("this is the calculating");
       return text.slice(0, 30).concat('...');
-    },[text]);
+});
 
 
     const myData =() => {
