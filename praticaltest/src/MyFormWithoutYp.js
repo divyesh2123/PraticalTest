@@ -6,7 +6,7 @@ import { Formik, Field, Form, ErrorMessage } from 'formik';
 export default class MyFormWithoutYp extends Component {
     constructor(props) {
         super(props);
-        this.handleSubmit = this.handleSubmit.bind(this);
+        this.handlxeSubmit = this.handleSubmit.bind(this);
       }
     
        validateEmployee = empData => {
