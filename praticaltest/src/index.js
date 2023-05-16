@@ -6,12 +6,15 @@ import App from './App';
 import { Provider } from "react-redux";
 import store from './store/store';
 import VideoPlayer from './VideoPlayer';
+import CustomHook from './CustomHook';
 
 ReactDOM.render(
  <BrowserRouter>
   <Provider store={store}>
 
-  <VideoPlayer></VideoPlayer>
+  {/* <VideoPlayer></VideoPlayer> */}
+
+  <CustomHook/>
   </Provider>
  
     </BrowserRouter>
