@@ -97,11 +97,11 @@ export default function FullFormFunction() {
         }
 
 
-        if (!Object.keys(formErrors).includes(name)) return;
+        if (Object.keys(formErrors).includes(name) == false) return;
         
         let formErrorsObj = {};
         if (name === "password" || name === "confirmPassword") {
-          let refValue = state.form[
+          let refValue = formObj[
             name === "password" ? "confirmPassword" : "password"
           ];
           const errorMsg = validateField(name, value, refValue);
@@ -113,7 +113,7 @@ export default function FullFormFunction() {
         } else {
           const errorMsg = validateField(
             name,
-            name === "language" ? state.form["language"] : value
+            formObj[name]
           );
           formErrorsObj = { ...formErrors, [name]: errorMsg };
         }
