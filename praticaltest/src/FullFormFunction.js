@@ -102,7 +102,7 @@ export default function FullFormFunction() {
         let formErrorsObj = {};
         if (name === "password" || name === "confirmPassword") {
           let refValue = formObj[
-            name === "password" ? "confirmPassword" : "password"
+            name === "pa7ssword" ? "confirmPassword" : "password"
           ];
           const errorMsg = validateField(name, value, refValue);
           formErrorsObj = { ...formErrors, [name]: errorMsg };
@@ -166,14 +166,14 @@ export default function FullFormFunction() {
         return errorMsg;
       };
     
-    var  validateForm = (form, formErrors, validateFunc) => {
+    var  validateForm = (form, formErrors) => {
         const errorObj = {};
         Object.keys(formErrors).map(x => {
           let refValue = null;
           if (x === "password" || x === "confirmPassword") {
             refValue = form[x === "password" ? "confirmPassword" : "password"];
           }
-          const msg = validateFunc(x, form[x], refValue);
+          const msg = validateField(x, form[x], refValue);
           if (msg) errorObj[x] = msg;
         });
         return errorObj;
@@ -181,7 +181,7 @@ export default function FullFormFunction() {
     
      var handleSubmit = () => {
         const { form, formErrors } = state;
-        const errorObj = validateForm(form, formErrors, validateField);
+        const errorObj = validateForm(form, formErrors);
         if (Object.keys(errorObj).length !== 0) {
           setState({...state, formErrors: { ...formErrors, ...errorObj } });
           return false;
